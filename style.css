@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all elements */
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* Sidebar Menu */
+.menu-item {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    width: 100%;
+    text-align: left; /* Aligns text properly */
+    padding-left: 20px; /* Consistent left padding */
+}
+
+.menu-item:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Sidebar Social Media Links */
+.sidebar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds space between elements */
+}
+
+.sidebar .container a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 60px;
+}
+
+/* Sections */
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Left-Aligned List */
+.skills-list, .project-list {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Aligns list items to the left */
+    max-width: 600px;
+    margin: 0 auto; /* Centers list within the section */
+}
+
+/* List Items */
+.skills-list li, .project-list li {
+    margin: 10px 0;
+    font-size: 18px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom Bullet Points */
+.skills-list li::before, 
+.project-list li::before {
+    content: "•"; /* Unicode bullet */
+    color: #1e1e2f; /* Bullet color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Header */
+.page-header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.25cm;
+    z-index: 1000;
+}
+
+/* Push down content to avoid overlap */
+.main-content {
+    margin-top: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
